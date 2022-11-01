@@ -7,7 +7,9 @@
 
 import 'dart:io'; // flutter_ignore: dart_io_import.
 import 'package:geolocator_android/geolocator_android.dart';
+import 'package:google_sign_in_android/google_sign_in_android.dart';
 import 'package:geolocator_apple/geolocator_apple.dart';
+import 'package:google_sign_in_ios/google_sign_in_ios.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider_linux/path_provider_linux.dart';
@@ -32,12 +34,32 @@ class _PluginRegistrant {
         rethrow;
       }
 
+      try {
+        GoogleSignInAndroid.registerWith();
+      } catch (err) {
+        print(
+          '`google_sign_in_android` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+        rethrow;
+      }
+
     } else if (Platform.isIOS) {
       try {
         GeolocatorApple.registerWith();
       } catch (err) {
         print(
           '`geolocator_apple` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+        rethrow;
+      }
+
+      try {
+        GoogleSignInIOS.registerWith();
+      } catch (err) {
+        print(
+          '`google_sign_in_ios` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
         rethrow;
