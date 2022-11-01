@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">697971779513-sc4m1bb5vf5k81lpigda8r65fb8d5hur.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">697971779513</string>
+    <string name="google_api_key" translatable="false">AIzaSyC-td89YxsOvTVdRKVQjRw3KHoHEaiJySk</string>
+    <string name="google_app_id" translatable="false">1:697971779513:android:bab8566f0fa1743bc13868</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC-td89YxsOvTVdRKVQjRw3KHoHEaiJySk</string>
+    <string name="google_storage_bucket" translatable="false">asroo-shop-getx-479de.appspot.com</string>
+    <string name="project_id" translatable="false">asroo-shop-getx-479de</string>
+</resources>

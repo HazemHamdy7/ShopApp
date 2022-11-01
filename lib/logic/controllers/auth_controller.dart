@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+// import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -169,24 +169,24 @@ class AuthController extends GetxController {
     }
   }
 
-  void faceBookSignUpApp() async {
-    final LoginResult loginResult = await FacebookAuth.instance.login();
-    // final accesToken = loginResult.accessToken!.token;
-    // final credential = FacebookAuthProvider.credential(accesToken);
-    // await auth.signInWithCredential(credential);
+  // void faceBookSignUpApp() async {
+  //   // final LoginResult loginResult = await FacebookAuth.instance.login();
+  //   // final accesToken = loginResult.accessToken!.token;
+  //   // final credential = FacebookAuthProvider.credential(accesToken);
+  //   // await auth.signInWithCredential(credential);
 
-    if (loginResult.status == LoginStatus.success) {
-      final data = await FacebookAuth.instance.getUserData();
-      faceBookModel = FaceBookModel.fromJson(data);
-      // displayUserPhoto.value = faceBookModel!.faceBookPhotoModel!.url!;
-      // displayUserEmail.value = faceBookModel!.email!;
-      // displayUserName.value = faceBookModel!.name!;
-      isSignedIn = true;
-      authBox.write("auth", isSignedIn);
-      update();
-      Get.offNamed(Routes.mainScreen);
-    }
-  }
+  //   // if (loginResult.status == LoginStatus.success) {
+  //   //   final data = await FacebookAuth.instance.getUserData();
+  //     faceBookModel = FaceBookModel.fromJson(data);
+  //     // displayUserPhoto.value = faceBookModel!.faceBookPhotoModel!.url!;
+  //     // displayUserEmail.value = faceBookModel!.email!;
+  //     // displayUserName.value = faceBookModel!.name!;
+  //     isSignedIn = true;
+  //     authBox.write("auth", isSignedIn);
+  //     update();
+  //     Get.offNamed(Routes.mainScreen);
+  //   }
+  // }
 
   void resetPassword(String email) async {
     try {
@@ -226,7 +226,7 @@ class AuthController extends GetxController {
     try {
       await auth.signOut();
       await googleSignIn.signOut();
-      await FacebookAuth.i.logOut();
+      // await FacebookAuth.i.logOut();
       displayUserName.value = '';
       displayUserPhoto.value = '';
       //displayUserEmail.value = '';

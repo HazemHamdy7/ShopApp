@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\project\\FlutterShopCourse-main\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fil\\values-fil.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\userH\\.gradle\\caches\\transforms-2\\files-2.1\\096a0c042e56ff48f283b3761f36d56f\\jetified-play-services-wallet-18.1.2\\res\\values-fil\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "203",
+                        "endColumns": "107",
+                        "endOffsets": "310"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "111",
+                        "endOffsets": "162"
+                    }
+                }
+            ]
+        }
+    ]
+}
